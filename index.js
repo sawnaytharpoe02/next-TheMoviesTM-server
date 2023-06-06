@@ -13,7 +13,10 @@ const rules = auth.rewriter({
 });
 
 app.use(cors());
+
 // You must apply the middlewares in the following order
+app.options('*', cors()); // Enable preflight requests
+
 app.use(rules);
 // You must apply the auth middleware before the router
 app.use(auth);
