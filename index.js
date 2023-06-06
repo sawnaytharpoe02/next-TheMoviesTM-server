@@ -10,7 +10,6 @@ app.db = router.db;
 const rules = auth.rewriter({
   // Permission rules
   users: 660,
-  movie_favorite: 660,
 });
 
 app.use(cors());
