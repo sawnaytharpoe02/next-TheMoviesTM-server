@@ -1,13 +1,13 @@
-const jsonServer = require('json-server');
-const auth = require('json-server-auth');
+import { create, router as _router } from 'json-server';
+import auth, { rewriter } from 'json-server-auth';
+import cors from 'cors';
 
-const app = jsonServer.create();
-const router = jsonServer.router('db.json');
-const cors = require('cors');
+const app = create();
+const router = _router('db.json');
 
 // /!\ Bind the router db to the app
 app.db = router.db;
-const rules = auth.rewriter({
+const rules = rewriter({
   // Permission rules
   users: 660,
 });

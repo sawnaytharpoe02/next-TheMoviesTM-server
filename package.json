@@ -1,5 +1,6 @@
 {
   "name": "movie-server-auth",
+  "type": "module",
   "version": "1.0.0",
   "description": "creating server for TheMoviesTM",
   "main": "index.js",
