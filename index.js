@@ -13,12 +13,20 @@ const rules = auth.rewriter({
 });
 
 app.use(cors());
-
-// You must apply the middlewares in the following order
 app.options('*', cors()); // Enable preflight requests
-
 app.use(rules);
-// You must apply the auth middleware before the router
 app.use(auth);
 app.use(router);
+
+// Custom middleware to set the Access-Control-Allow-Origin header
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, PUT, PATCH, DELETE'
+  );
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 app.listen(3000);
