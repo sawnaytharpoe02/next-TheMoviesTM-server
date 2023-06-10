@@ -1,4 +1,22 @@
 {
-  "users": [],
-  "movie_favorite": []
+  "users": [
+    {
+      "email": "does@gmail.com",
+      "password": "$2a$10$w7E21fYzeIbTu2JwTuukPu0I59jf7DbHmjf3gHx9GB.mS5htaavLy",
+      "id": 1
+    }
+  ],
+  "movie_favorite": [
+    {
+      "title": "The Super Mario Bros. Movie",
+      "original_title": "The Super Mario Bros. Movie",
+      "original_language": "en",
+      "overview": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+      "popularity": 2311.329,
+      "release_date": "2023-04-05",
+      "vote_average": 7.8,
+      "vote_count": 4901,
+      "id": 1
+    }
+  ]
 }
